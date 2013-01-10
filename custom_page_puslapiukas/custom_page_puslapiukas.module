@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Custom Page Puslapiukas feature.
+ */
+
+include_once 'custom_page_puslapiukas.features.inc';
