@@ -5,3 +5,26 @@
  */
 
 include_once 'blog_feature.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+function blog_feature_init() {
+  //Add CSS to this feature
+  drupal_add_css(drupal_get_path('module', 'blog_feature') . '/blog_feature.css');
+}
+
+/**
+ * Implements hook_permission().
+ */
+function blog_feature_permission() {
+  return array(
+    'administer lullablog status' => array(
+      'title' => t('Administer blog post status.'),
+    ),
+  );
+}
+
+function blog_feature_form_blog_node_form_alter(&$form, &$form_state) {
+  dsm($form);
+}
